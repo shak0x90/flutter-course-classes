@@ -53,9 +53,16 @@ void main() {
         //   ),
         // ),
 
-        body: Text(
-          "Help Me",
-          style: TextStyle(fontFamily: "SourceCodePro"),
+        // body: Text(
+        //   "Help Me",
+        //   style: TextStyle(fontFamily: "SourceCodePro"),
+        // ),
+        body: Center(
+          child: (Icon(
+            Icons.photo,
+            color: Colors.red,
+            size: 200,
+          )),
         ),
       ),
     ),
