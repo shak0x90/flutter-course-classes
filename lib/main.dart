@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:testapp/contacts_list.dart';
 //import 'package:testapp/homePage.dart';
-import 'package:testapp/profileScreen.dart';
+// import 'package:testapp/profileScreen.dart';
 
 void main() {
   runApp(
@@ -9,7 +10,8 @@ void main() {
       debugShowCheckedModeBanner: false,
       theme: ThemeData(fontFamily: "Lobster"),
       // home: HomePage()),
-      home: ProfileScreen(),
+      // home: ProfileScreen(),
+      home: ContactList(),
     ),
   );
 }
