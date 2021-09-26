@@ -17,7 +17,7 @@ class ContactList extends StatelessWidget {
           children: [
             Stack(
               children: [
-                Image.asset("assets/rezero.jpeg"),
+                Image.asset("assets/rem.jpg"),
                 Positioned(
                   left: 20,
                   top: 20,
@@ -52,7 +52,49 @@ class ContactList extends StatelessWidget {
                 //   child:
                 // )
               ],
-            )
+            ),
+            ListTile(
+              onTap: () {
+                Fluttertoast.showToast(
+                    msg: "This is Music",
+                    toastLength: Toast.LENGTH_SHORT,
+                    gravity: ToastGravity.CENTER,
+                    timeInSecForIosWeb: 2,
+                    backgroundColor: Colors.red,
+                    textColor: Colors.white,
+                    fontSize: 16.0);
+              },
+              leading: Icon(Icons.music_note_outlined),
+              title: Text("Music"),
+            ),
+            ListTile(
+              onTap: () {
+                Fluttertoast.showToast(
+                    msg: "THis is Video",
+                    toastLength: Toast.LENGTH_SHORT,
+                    gravity: ToastGravity.CENTER,
+                    timeInSecForIosWeb: 2,
+                    backgroundColor: Colors.red,
+                    textColor: Colors.white,
+                    fontSize: 16.0);
+              },
+              leading: Icon(Icons.video_call_outlined),
+              title: Text("video"),
+            ),
+            ListTile(
+              onTap: () {
+                Fluttertoast.showToast(
+                    msg: "This is settings  ",
+                    toastLength: Toast.LENGTH_SHORT,
+                    gravity: ToastGravity.CENTER,
+                    timeInSecForIosWeb: 2,
+                    backgroundColor: Colors.red,
+                    textColor: Colors.white,
+                    fontSize: 16.0);
+              },
+              leading: Icon(Icons.settings_applications_outlined),
+              title: Text("settings"),
+            ),
           ],
         ),
       ),
