@@ -12,6 +12,50 @@ class ContactList extends StatelessWidget {
       appBar: AppBar(
         title: Text("ListView"),
       ),
+      drawer: Drawer(
+        child: Column(
+          children: [
+            Stack(
+              children: [
+                Image.asset("assets/rezero.jpeg"),
+                Positioned(
+                  left: 20,
+                  top: 20,
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      CircleAvatar(
+                        radius: 28,
+                        backgroundImage: AssetImage("assets/rem.jpg"),
+                      ),
+                      Text(
+                        "Shakil Ahmed",
+                        style:
+                            TextStyle(color: Colors.blueAccent, fontSize: 22),
+                      ),
+                      Text(
+                        "shakil@gamil.com",
+                        style:
+                            TextStyle(color: Colors.blueAccent, fontSize: 14),
+                      ),
+                    ],
+                  ),
+                ),
+                // Positioned(
+                //   left: 20,
+                //   top: 80,
+
+                // ),
+                // Positioned(
+                //   left: 20,
+                //   top: 110,
+                //   child:
+                // )
+              ],
+            )
+          ],
+        ),
+      ),
 
       body: ListView.separated(
           separatorBuilder: (BuildContext context, int index) {
@@ -37,10 +81,17 @@ class ContactList extends StatelessWidget {
               ),
               title: Text("absd"),
               subtitle: Text("this is sub"),
-              trailing: Icon(Icons.arrow_back_ios_new),
+              trailing: Row(
+                mainAxisSize: MainAxisSize.min,
+                children: [
+                  Icon(Icons.delete),
+                  Icon(Icons.info),
+                  Icon(Icons.arrow_back_ios_new),
+                ],
+              ),
             );
           }),
-      // body: ListView(
+      // body: ListView(S
       //   children: [
       //     Container(
       //       height: 50,
