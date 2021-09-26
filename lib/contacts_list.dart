@@ -58,7 +58,7 @@ class ContactList extends StatelessWidget {
                 Fluttertoast.showToast(
                     msg: "This is Music",
                     toastLength: Toast.LENGTH_SHORT,
-                    gravity: ToastGravity.CENTER,
+                    gravity: ToastGravity.CENTER_LEFT,
                     timeInSecForIosWeb: 2,
                     backgroundColor: Colors.red,
                     textColor: Colors.white,
@@ -95,6 +95,27 @@ class ContactList extends StatelessWidget {
               leading: Icon(Icons.settings_applications_outlined),
               title: Text("settings"),
             ),
+            Material(
+              color: Colors.pinkAccent,
+              child: InkWell(
+                onTap: () {
+                  Fluttertoast.showToast(
+                      msg: "Log Out button  ",
+                      toastLength: Toast.LENGTH_SHORT,
+                      gravity: ToastGravity.CENTER,
+                      timeInSecForIosWeb: 2,
+                      backgroundColor: Colors.red,
+                      textColor: Colors.white,
+                      fontSize: 16.0);
+                },
+                hoverColor: Colors.blue,
+                child: Container(
+                  child: Center(child: Text("Log Out")),
+                  width: double.infinity,
+                  height: 48,
+                ),
+              ),
+            )
           ],
         ),
       ),
