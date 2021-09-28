@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:fluttertoast/fluttertoast.dart';
+import 'package:testapp/logout.dart';
 
 class ContactList extends StatelessWidget {
   const ContactList({Key? key}) : super(key: key);
@@ -99,14 +100,10 @@ class ContactList extends StatelessWidget {
               color: Colors.pinkAccent,
               child: InkWell(
                 onTap: () {
-                  Fluttertoast.showToast(
-                      msg: "Log Out button  ",
-                      toastLength: Toast.LENGTH_SHORT,
-                      gravity: ToastGravity.CENTER,
-                      timeInSecForIosWeb: 2,
-                      backgroundColor: Colors.red,
-                      textColor: Colors.white,
-                      fontSize: 16.0);
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => const LogOut())); //routing
                 },
                 hoverColor: Colors.blue,
                 child: Container(
